@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841734012792377109}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.438, y: 1.122, z: -1.5556641}
+  m_LocalPosition: {x: -2.438, y: 1.122, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1966152060978813746}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb509005e244aac488e6a41e980a0dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  one_Banana: {fileID: 7703579722111057193, guid: 9706d072a603e15449dd80c684c815f4,
+  one_Banana: {fileID: 7183265106940982844, guid: 9706d072a603e15449dd80c684c815f4,
     type: 3}
-  bananas: {fileID: 5323684951374721458, guid: c4f07a5b9f390704ca23a9a102369128, type: 3}
+  bananas: {fileID: 2191481195020162485, guid: c4f07a5b9f390704ca23a9a102369128, type: 3}
   spawn_Point: {fileID: 1549056653648577267}
