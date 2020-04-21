@@ -9,44 +9,19 @@ public class GameManager : MonoBehaviour {
     void Awake() {
         if (instance == null)
             instance = this;
-    }
+    }//awake
 
     public void RestartGame() {
         Invoke("LoadGameplay", 2f);
-    }
+    }//restart
 
     void LoadGameplay() {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Gameplay");
-    }
+    }//load
 
 
 
 } // class
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

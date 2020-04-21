@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlatformScript : MonoBehaviour {
 
+    //holds the banana prefabs for spawner
     [SerializeField]
     private GameObject one_Banana, bananas;
 
+    //holds spawner object
     [SerializeField]
     private Transform spawn_Point;
 
@@ -15,6 +17,7 @@ public class PlatformScript : MonoBehaviour {
 
         GameObject newBanana = null;
 
+        //randomly spawns one banana or bananas on a platform
         if(Random.Range(0, 10) > 3) {
 
             newBanana = Instantiate(one_Banana, spawn_Point.position, Quaternion.identity);
@@ -27,42 +30,10 @@ public class PlatformScript : MonoBehaviour {
 
         newBanana.transform.parent = transform;
 
-    }
+    }//start
 
 
 } // class
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

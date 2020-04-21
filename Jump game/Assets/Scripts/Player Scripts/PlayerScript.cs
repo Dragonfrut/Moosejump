@@ -6,14 +6,13 @@ using UnityEngine.WSA;
 public class PlayerScript : MonoBehaviour {
 
     private Rigidbody2D myBody;
-
+    //movement variables
     public float move_Speed = 2f;
     public float tilt;
     public float normal_Push = 10f;
     public float extra_Push = 14f;
-
+    //push at start of game
     private bool initial_Push;
-
     private int push_Count;
 
     private bool player_Died;
@@ -31,8 +30,8 @@ public class PlayerScript : MonoBehaviour {
 
         if (player_Died)
             return;
-
-        /*if(Input.GetAxisRaw("Horizontal") > 0) {
+        /*
+        if (Input.GetAxisRaw("Horizontal") > 0) {
 
             myBody.velocity = new Vector2(move_Speed, myBody.velocity.y);
 
@@ -40,19 +39,19 @@ public class PlayerScript : MonoBehaviour {
 
             myBody.velocity = new Vector2(-move_Speed, myBody.velocity.y);
 
-        }*/
-
+        }
+        */
         tilt = Input.acceleration.x * move_Speed;
         transform.position = new Vector2(Mathf.Clamp(transform.position.x, -2.635f, 2.635f), transform.position.y);
-        myBody.velocity = new Vector2(tilt, 0f);
-
+        myBody.velocity = new Vector2(tilt, myBody.velocity.y);
+        
     } // player movement
 
     void OnTriggerEnter2D(Collider2D target) {
 
         if (player_Died)
             return;
-
+        //push from the first default bananas
         if (target.tag == "ExtraPush") { 
 
             if(!initial_Push) {
@@ -68,12 +67,11 @@ public class PlayerScript : MonoBehaviour {
                 // exit from the on trigger enter because of initial push
                 return;
             } // initial push
+        }
 
-            // outside of the initial push
-
-        } // because of the initial push
-
-        if(target.tag == "NormalPush") {
+        // outside of the initial push
+        // push from one banana 
+        if (target.tag == "NormalPush") {
 
             myBody.velocity = new Vector2(myBody.velocity.x, normal_Push);
 
@@ -87,6 +85,7 @@ public class PlayerScript : MonoBehaviour {
 
         }
 
+        //push from bananas
         if (target.tag == "ExtraPush") {
 
             myBody.velocity = new Vector2(myBody.velocity.x, extra_Push);
@@ -108,6 +107,7 @@ public class PlayerScript : MonoBehaviour {
 
         }
 
+        //what happens when player falls/hits bird
         if(target.tag == "FallDown" || target.tag == "Bird") {
 
             player_Died = true;
@@ -123,46 +123,5 @@ public class PlayerScript : MonoBehaviour {
 
 
 } // class
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

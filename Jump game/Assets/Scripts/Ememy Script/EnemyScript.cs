@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour {
 
     //making variables for current position and edge positions
-    private SpriteRenderer mySpriteRenderer;
+    //private SpriteRenderer mySpriteRenderer;
     private Vector3 myPosition;
     private Vector3 pos1;
     private Vector3 pos2;
@@ -13,7 +13,7 @@ public class EnemyScript : MonoBehaviour {
 
     // Start is called before the first frame update
      void Awake() {
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        //mySpriteRenderer = GetComponent<SpriteRenderer>();
 
     }//Awake 
 
@@ -21,7 +21,7 @@ public class EnemyScript : MonoBehaviour {
     void Update() {
 
         myPosition = transform.position;
-
+        //setting turn around postions for enemy move
         pos1 = new Vector3(-2.634f, myPosition.y, myPosition.z);
         pos2 = new Vector3(2.634f, myPosition.y, myPosition.z);
 
