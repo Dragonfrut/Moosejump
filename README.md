@@ -34,3 +34,5 @@ https://forum.unity.com/threads/solved-nullreferenceexception-object-reference-n
 https://answers.unity.com/questions/1643631/annoying-error-in-console-not-a-prefab-scene.html
 
 https://forum.unity.com/threads/hololens-wsa-does-not-exist-in-the-namespace.488741/
+
+https://www.youtube.com/watch?v=fHN-26GEVhA&t=1079s
