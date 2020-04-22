@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -12,12 +13,9 @@ public class GameManager : MonoBehaviour {
     }//awake
 
     public void RestartGame() {
-        Invoke("LoadGameplay", 2f);
+        SceneManager.LoadScene("EndGame");
     }//restart
 
-    void LoadGameplay() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Gameplay");
-    }//load
 
 
 
