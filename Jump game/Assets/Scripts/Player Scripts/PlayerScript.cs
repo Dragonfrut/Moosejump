@@ -7,7 +7,7 @@ public class PlayerScript : MonoBehaviour {
 
     private Rigidbody2D myBody;
     //movement variables
-    public float move_Speed = 2f;
+    public float move_Speed = 4f;
     public float tilt;
     public float normal_Push = 10f;
     public float extra_Push = 14f;
@@ -30,7 +30,7 @@ public class PlayerScript : MonoBehaviour {
 
         if (player_Died)
             return;
-        /*
+        /* PC controls, uncomment and comment the tilt controls if wanted
         if (Input.GetAxisRaw("Horizontal") > 0) {
 
             myBody.velocity = new Vector2(move_Speed, myBody.velocity.y);
